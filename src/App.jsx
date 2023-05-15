@@ -4,9 +4,22 @@ import Squares from "./components/square";
 
 function App() {
   return (
-    <div>
-      <h1 className="text-red-600">Building a Tic-Tac-Toe game</h1>
-      <Squares />
+    <div className="p-[12px]">
+      <h1 className="text-red-600 m-[10px]">TIC-TAC-TOE</h1>
+
+      <div className="grid grid-cols-3 w-fit">
+        <Squares />
+        <Squares />
+        <Squares />
+
+        <Squares />
+        <Squares />
+        <Squares />
+
+        <Squares />
+        <Squares />
+        <Squares />
+      </div>
     </div>
   );
 }
