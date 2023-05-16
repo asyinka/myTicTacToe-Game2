@@ -1,4 +1,3 @@
-import Squares from "./components/Squares";
 import Board from "./services/Board";
 
 const App = () => {
