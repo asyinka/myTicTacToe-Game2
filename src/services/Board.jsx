@@ -8,8 +8,17 @@ const Board = () => {
   function handleClick(i) {
     //to avoid mutating our array we call .slice() to create another array
     const nextSquare = squares.slice();
-    //change the value of item at index 'i' from 'null' to 'X' when clicked
-    nextSquare[i] = "X";
+    //check if xISNext is true or false
+    if (xIsNext) {
+      //change the value of item at index 'i' from 'null' to 'X' when clicked
+      nextSquare[i] = "X";
+    } else {
+      //change the value of item at index 'i' from 'null' to 'X' when clicked
+      nextSquare[i] = "O";
+    }
+    //invert the value of xIsNext
+    setXIsNext(!xIsNext);
+
     //update the state of squares, since the values changed. This also re-renders the component
     setSquares(nextSquare);
   }
