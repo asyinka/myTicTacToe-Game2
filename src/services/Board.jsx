@@ -4,11 +4,20 @@ import Squares from "../components/Squares";
 const Board = () => {
   //create nine empty array
   const [squares, setSquares] = useState(Array(9).fill(null));
+  const [xIsNext, setXIsNext] = useState(true);
 
   function handleClick(i) {
+    if (squares[i]) return;
     //create a new array for squares so as not to mutate the original array
     const newSquares = squares.slice();
-    newSquares[i] = "X";
+    //check if xIsNext is true or false and display corresponding tic
+    if (xIsNext) {
+      newSquares[i] = "X";
+    } else {
+      newSquares[i] = "O";
+    }
+
+    setXIsNext(!xIsNext);
 
     setSquares(newSquares);
   }
