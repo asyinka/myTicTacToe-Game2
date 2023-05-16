@@ -8,6 +8,10 @@ const Board = () => {
   function handleClick(i) {
     //to avoid mutating our array we call .slice() to create another array
     const nextSquare = squares.slice();
+    //check if the square is already filled and return if filled
+    if (nextSquare[i]) {
+      return;
+    }
     //check if xISNext is true or false
     if (xIsNext) {
       //change the value of item at index 'i' from 'null' to 'X' when clicked
