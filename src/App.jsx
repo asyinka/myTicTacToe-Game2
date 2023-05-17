@@ -1,4 +1,4 @@
-import Board from "./services/Board";
+import Game from "./services/Game";
 
 const App = () => {
   return (
@@ -6,7 +6,7 @@ const App = () => {
       <h1 className="text-red-700 font-extrabold font-serif">
         TIC-TAC-TOE GAME
       </h1>
-      <Board />
+      <Game />
     </div>
   );
 };

@@ -1,10 +1,7 @@
 import { useState } from "react";
 import Squares from "../components/Squares";
 
-const Board = () => {
-  //create nine empty array
-  const [squares, setSquares] = useState(Array(9).fill(null));
-  const [xIsNext, setXIsNext] = useState(true);
+const Board = ({ squares, xIsNext, onPlay }) => {
   let status;
   const Winner = checkWinner(squares);
 
@@ -25,9 +22,11 @@ const Board = () => {
       newSquares[i] = "O";
     }
 
-    setXIsNext(!xIsNext);
+    onPlay(newSquares);
 
-    setSquares(newSquares);
+    // setXIsNext(!xIsNext);
+
+    // setSquares(newSquares);
   }
   return (
     <>
