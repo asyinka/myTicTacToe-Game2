@@ -4,10 +4,11 @@ import Board from "./Board";
 const Game = () => {
   //tracks all the moves
   const [history, setHistory] = useState([Array(9).fill(null)]);
-  //toggles xIsNext status
-  const xIsNext = nextMove % 2 === 0;
+
   //monitors which step the user is on
   const [currentMove, setCurrentMove] = useState(0);
+  //toggles xIsNext status
+  const xIsNext = currentMove % 2 === 0;
   //replaces square; the current move
   const currentSquare = history[currentMove];
 
