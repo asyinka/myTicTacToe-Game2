@@ -31,7 +31,7 @@ const Board = ({ squares, xIsNext, onPlay }) => {
   return (
     <>
       <div className="font-extrabold text-xl text-sky-500">{status}</div>
-      <div className="w-fit grid grid-cols-3 mt-3 bg-amber-200">
+      <div className="w-fit grid grid-cols-3 mt-3 bg-amber-200 m-auto">
         <Squares value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Squares value={squares[1]} onSquareClick={() => handleClick(1)} />
         <Squares value={squares[2]} onSquareClick={() => handleClick(2)} />
